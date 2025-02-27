@@ -7,56 +7,88 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Aluminum Panels Prices</h1>
-
-      <div class="radio-group">
-        <label
-          ><input type="radio" name="pricingMode" value="distributor" checked />
-          Distributor</label
-        >
-        <label
-          ><input type="radio" name="pricingMode" value="retail" />
-          Retail</label
-        >
+    <noscript>
+      <div
+        style="
+          background: red;
+          color: white;
+          padding: 15px;
+          text-align: center;
+          font-size: 18px;
+        "
+      >
+        ⚠ JavaScript is disabled. Please enable JavaScript in your browser to
+        use this calculator.
       </div>
-
-      <div class="form-group">
-        <label for="openingMethod">What opening method do you want?</label>
-        <select id="openingMethod">
-          <option value="" disabled selected>Please select</option>
-          <option value="sliding">Sliding Panels</option>
-          <option value="bifold">Bifold Panels</option>
-          <option value="fixed">Fixed Panels with Operable Blades</option>
-          <option value="swing">Swing Panels</option>
-        </select>
-      </div>
-
-      <div id="subModelGroup" class="form-group" style="display: none">
-        <label for="subModel">Select Model:</label>
-        <select id="subModel"></select>
-      </div>
-
-      <div class="form-group">
-        <label for="length">Enter Pergola Length (ft):</label>
-        <input type="number" id="length" placeholder="e.g., 20" />
-      </div>
-      <div class="form-group">
-        <label for="width">Enter Pergola Projection Width (ft):</label>
-        <input type="number" id="width" placeholder="e.g., 15" />
-      </div>
-      <div class="static">Fixed Height: 8.5 ft</div>
-
-      <button class="calculate-button" onclick="calculatePrice()">
-        Calculate
-      </button>
-
-      <div class="result" id="result"></div>
-
-      <div class="image-container" id="imageContainer" style="display: none">
-        <img id="panelImage" src="" alt="Panel Illustration" />
-      </div>
+    </noscript>
+    <div id="jsWarning">
+      ⚠ JavaScript is not working properly. Please enable it.
     </div>
+    <header>
+      <img src="img/logo-sunx.png" alt="Logo SunX" />
+      <h1>Aluminum Panels Price Calculator</h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="radio-group">
+          <label
+            ><input
+              type="radio"
+              name="pricingMode"
+              value="distributor"
+              checked
+            />
+            Distributor</label
+          >
+          <label
+            ><input type="radio" name="pricingMode" value="retail" />
+            Retail</label
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="openingMethod">What opening method do you want?</label>
+          <select id="openingMethod">
+            <option value="" disabled selected>Please select</option>
+            <option value="sliding">Sliding Panels</option>
+            <option value="bifold">Bifold Panels</option>
+            <option value="fixed">Fixed Panels with Operable Blades</option>
+            <option value="swing">Swing Panels</option>
+          </select>
+        </div>
+
+        <div id="subModelGroup" class="form-group" style="display: none">
+          <label for="subModel">Select Model:</label>
+          <select id="subModel"></select>
+        </div>
+
+        <div class="form-group">
+          <label for="length">Enter Pergola Length (ft):</label>
+          <input type="number" id="length" placeholder="e.g., 20" />
+        </div>
+        <div class="form-group">
+          <label for="width">Enter Pergola Projection Width (ft):</label>
+          <input type="number" id="width" placeholder="e.g., 15" />
+        </div>
+        <div class="static">Fixed Height: 8.5 ft</div>
+
+        <button class="calculate-button" onclick="calculatePrice()">
+          Calculate
+        </button>
+
+        <div class="result" id="result"></div>
+
+        <div class="image-container" id="imageContainer" style="display: none">
+          <img id="panelImage" src="" alt="Panel Illustration" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        &copy; 2025. Originally created by Sunx. Enhanced & maintained by
+        WittyLab.
+      </p>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>

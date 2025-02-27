@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector("#jsWarning").style.display = "none";
+});
+
 const basePrices = {
   sliding: {
     "JAL-D24A": 14.86,
